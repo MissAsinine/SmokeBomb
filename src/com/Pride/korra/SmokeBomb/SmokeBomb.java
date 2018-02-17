@@ -51,6 +51,7 @@ import com.projectkorra.projectkorra.util.ParticleEffect;
 		start();
 	}
 	
+	\\method should be removed because its literally unessecary\\
 	public class SmokeBombs {
 		
 		private final Map<Integer, SmokeBomb> SNOWBALLS = new ConcurrentHashMap<>();
@@ -82,6 +83,7 @@ import com.projectkorra.projectkorra.util.ParticleEffect;
 			Location newLoc = new Location(loc.getWorld(), loc.getX() + x, loc.getY() + y, loc.getZ() + z);
 			for (int direction = 0; direction < 8; direction++) {
 				loc.getWorld().playEffect(newLoc, Effect.POTION_SWIRL, direction);
+                        \\do whatever you want for the particle effect, reece\\			
 			}
 			if (z == 2) {
 				z = -2;
@@ -145,6 +147,7 @@ import com.projectkorra.projectkorra.util.ParticleEffect;
 
 	private void displayBombs(){
 	ParticleEffect.CRIT.display(getRightHandPos().toVector().add(player.getEyeLocation().getDirection().clone().multiply(.8D)).toLocation(player.getWorld()), 0.1F, 0.1F, 0.1F, 0.01F, 15);
+	\\if you want, you can change these particles too, idc\\
 	}
 	
 	public static void progressBombs() {
